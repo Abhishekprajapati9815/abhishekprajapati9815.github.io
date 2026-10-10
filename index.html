@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Abhishek Prajapati | Learning &amp; Development Manager</title>
+<meta name="description" content="Learning & Development Manager in Indore: leadership development, change management, instructional design and learning analytics.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#ffffff;--card:#ffffff;--ink:#12264a;--mute:#52627f;--line:#dbe6f5;--accent:#1d5fd1;--warm:#5b9bf0;--wash:#eaf2fd;--soft:#f3f8ff}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.65 "Source Sans 3",system-ui,sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque","Source Sans 3",system-ui,sans-serif;line-height:1.15;margin:0}
+a{color:var(--accent)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--warm);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+nav{position:sticky;top:0;z-index:5;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;gap:22px;align-items:center;overflow-x:auto;padding-top:12px;padding-bottom:12px;white-space:nowrap}
+nav b{font-family:"Bricolage Grotesque",sans-serif;margin-right:auto}
+nav a{text-decoration:none;color:var(--mute);font-size:15px}
+nav a:hover{color:var(--accent)}
+.hero{display:grid;grid-template-columns:1fr 280px;gap:48px;align-items:center;padding:72px 0 56px}
+.hero h1{font-size:clamp(40px,7vw,72px);font-weight:700;letter-spacing:-.02em}
+.hero .role{font-size:clamp(18px,2.4vw,22px);color:var(--accent);font-weight:600;margin:14px 0 18px}
+.hero p{max-width:60ch;color:var(--mute);margin:0 0 24px}
+.hero img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:14px;border:1px solid var(--line)}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;padding:11px 20px;border-radius:8px;text-decoration:none;font-weight:600;border:2px solid var(--accent);color:var(--accent)}
+.btn.main{background:var(--accent);color:#fff}
+.btn:hover{border-color:var(--warm)}
+section{padding:56px 0;border-top:1px solid var(--line)}
+#certs,#education{background:var(--soft)}
+.top{background:linear-gradient(180deg,var(--soft),#fff)}
+section>.wrap>h2{font-size:clamp(28px,4vw,38px);margin-bottom:8px}
+.lead{color:var(--mute);margin:0 0 30px;max-width:62ch}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:0;border:1px solid var(--line);border-radius:12px;background:var(--card);overflow:hidden}
+.stats div{padding:22px;border-right:1px solid var(--line)}
+.stats div:last-child{border-right:0}
+.stats strong{display:block;font:700 30px/1.1 "Bricolage Grotesque",sans-serif;color:var(--accent)}
+.stats span{font-size:15px;color:var(--mute)}
+.job{display:grid;grid-template-columns:200px 1fr;gap:12px 32px;padding:26px 0;border-bottom:1px solid var(--line)}
+.job:last-child{border-bottom:0}
+.job .when{color:var(--mute);font-size:15px}
+.job h3{font-size:21px}
+.job .org{color:var(--accent);font-weight:600;margin-bottom:8px}
+ul{margin:0;padding-left:20px}
+li{margin:5px 0}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 26px;padding:0;list-style:none}
+.tags li{margin:0;padding:5px 12px;border-radius:999px;background:var(--wash);font-size:15px}
+.group h3{font-size:18px;margin-top:6px}
+.certs{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:20px}
+.cert{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;display:flex;flex-direction:column}
+.cert a.img{display:block;background:#fff;aspect-ratio:4/3;border-bottom:1px solid var(--line)}
+.cert img{width:100%;height:100%;object-fit:contain;display:block}
+.cert div{padding:14px 16px 16px}
+.cert h3{font-size:17px}
+.cert p{margin:4px 0 0;font-size:15px;color:var(--mute)}
+.quotes{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+blockquote{margin:0;padding:6px 0 6px 22px;border-left:4px solid var(--warm)}
+blockquote.big{grid-column:1/-1;border-left-width:6px}
+blockquote.big p{font:500 clamp(21px,3vw,28px)/1.35 "Bricolage Grotesque",sans-serif}
+blockquote p{margin:0 0 10px}
+cite{font-style:normal;color:var(--mute);font-size:15px}
+cite b{color:var(--ink)}
+.edu{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.edu div{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px}
+.edu h3{font-size:19px}
+.edu p{margin:6px 0 0;color:var(--mute);font-size:15px}
+footer{padding:48px 0 60px;border-top:1px solid var(--line);color:var(--mute);font-size:15px}
+footer h2{color:var(--ink);font-size:30px;margin-bottom:10px}
+@media (max-width:760px){.hero{grid-template-columns:1fr;padding-top:40px}.hero img{max-width:260px;order:-1}.job{grid-template-columns:1fr}.quotes{grid-template-columns:1fr}.stats div{border-right:0;border-bottom:1px solid var(--line)}.stats div:last-child{border-bottom:0}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<nav><div class="wrap"><b>Abhishek Prajapati</b><a href="#work">Experience</a><a href="#skills">Skills</a><a href="#certs">Certifications</a><a href="#appreciation">Appreciation</a><a href="#contact">Contact</a></div></nav>
+
+<div class="top"><header class="wrap hero">
+<div>
+<h1>Abhishek Prajapati</h1>
+<div class="role">Learning &amp; Development Manager</div>
+<p>I design and run learning programs that help managers lead, new hires settle in and teams adapt to change. Over 6.8 years across Patra Corporation, Moreyeahs and TaskUs, I have built leadership journeys, onboarding, change workshops and the learning data that shows whether they work.</p>
+<div class="btns">
+<a class="btn main" href="mailto:abhishekprajapati9815@gmail.com">Email me</a>
+<a class="btn" href="https://www.linkedin.com/in/abhishek-prajapati-93929184" target="_blank" rel="noopener">LinkedIn</a>
+<a class="btn" href="#appreciation">Read what colleagues say</a>
+</div>
+</div>
+<img src="images/abhishek.jpg" alt="Portrait of Abhishek Prajapati" width="280" height="350">
+</header></div>
+
+<main>
+<section style="border-top:0;padding-top:0"><div class="wrap">
+<div class="stats">
+<div><strong>~450</strong><span>managers enrolled in leadership and manager-development programs</span></div>
+<div><strong>52% to 82%</strong><span>e-learning engagement after redesigning the MAPS learning journey</span></div>
+<div><strong>3 regions</strong><span>global onboarding across the US, Philippines and India</span></div>
+<div><strong>300+</strong><span>employees and 15+ team leads supported at TaskUs</span></div>
+</div>
+</div></section>
+
+<section id="work"><div class="wrap">
+<h2>Experience</h2>
+<p class="lead">Learning work across IT services, insurance technology and BPO operations.</p>
+
+<div class="job"><div class="when">Apr 2025 to present<br>Indore</div><div>
+<h3>Learning &amp; Development Manager</h3><div class="org">Patra Corporation</div>
+<ul>
+<li>Lead leadership and manager development across India and US operations, including the Level Up program for managers and senior managers.</li>
+<li>Redesigned the MAPS (Manager Achievements Pathways) learning journey, lifting e-learning engagement from 52% to 82%.</li>
+<li>Built a tiered leadership capability framework that moves people from "Doing" to "Leading".</li>
+<li>Lead global onboarding for the US, Philippines and India, and the training dashboard used in business reviews.</li>
+<li>Facilitate change management workshops (including change in the age of AI) and DISC-based behavioral interventions.</li>
+<li>Created a mental health awareness program for first-time managers.</li>
+</ul></div></div>
+
+<div class="job"><div class="when">Apr 2024 to Apr 2025<br>Contract</div><div>
+<h3>Learning &amp; Development Specialist</h3><div class="org">Moreyeahs IT Technologies</div>
+<ul>
+<li>Ran L&amp;D end to end, with role-based training for IT professionals across 6 technical teams.</li>
+<li>Carried out training needs analyses, including with Sales and Marketing, and managed external training vendors.</li>
+<li>Developed e-learning and compliance content, managed LMS delivery and helped set up the in-house LMS.</li>
+<li>Facilitated workshops on communication, leadership, coaching, feedback and resilience.</li>
+</ul></div></div>
+
+<div class="job"><div class="when">Jan 2020 to Apr 2024<br>Indore</div><div>
+<h3>Learning Experience Leader</h3><div class="org">TaskUs</div>
+<ul>
+<li>Designed and delivered onboarding, process and customer experience training in a BPO environment.</li>
+<li>Supported 15+ team leads and 300+ employees through training and coaching, and led a team of SMEs and QAs.</li>
+<li>Produced SOPs, manuals, job aids and New Hire Integration Programmes.</li>
+<li>Owned training for new-hire interns and guided their move into full-time operations roles.</li>
+</ul></div></div>
+</div></section>
+
+<section id="skills"><div class="wrap">
+<h2>Skills and tools</h2>
+<p class="lead">The methods I use and the platforms I build on.</p>
+<div class="group">
+<h3>Practice</h3>
+<ul class="tags"><li>Leadership development</li><li>Change management</li><li>Instructional design</li><li>Behavioural facilitation</li><li>Learning needs analysis</li><li>Blended learning</li><li>Organizational development</li><li>Learning analytics</li><li>Virtual facilitation</li><li>Coaching</li></ul>
+<h3>Learning platforms and content</h3>
+<ul class="tags"><li>Articulate 360 (Storyline, Rise)</li><li>Docebo</li><li>Moodle</li><li>Talent LMS</li><li>LMS administration</li><li>Canva</li><li>Adobe Express</li></ul>
+<h3>Data and collaboration</h3>
+<ul class="tags"><li>Power BI</li><li>Excel</li><li>Google Sheets</li><li>Microsoft Teams, Zoom, Google Meet</li><li>Confluence</li><li>Notion</li><li>ChatGPT and Microsoft 365 Copilot</li></ul>
+<h3>Assessments</h3>
+<ul class="tags"><li>DISC</li><li>CliftonStrengths</li><li>MBTI</li></ul>
+</div>
+</div></section>
+
+<section id="certs"><div class="wrap">
+<h2>Certifications</h2>
+<p class="lead">Select an image to open the full certificate.</p>
+<div class="certs">
+<article class="cert"><a class="img" href="images/codip.jpg" target="_blank" rel="noopener"><img src="images/codip.jpg" alt="Certified OD Intervention Professional certificate" loading="lazy"></a><div><h3>Certified OD Intervention Professional</h3><p>Middle Earth HR, 2022, with High Honors</p></div></article>
+<article class="cert"><a class="img" href="images/instructional-design.jpg" target="_blank" rel="noopener"><img src="images/instructional-design.jpg" alt="Certified Instructional Design Specialist certificate" loading="lazy"></a><div><h3>Certified Instructional Design Specialist</h3><p>Henry Harvin Education, September 2022</p></div></article>
+<article class="cert"><a class="img" href="images/mental-health-first-aid.jpg" target="_blank" rel="noopener"><img src="images/mental-health-first-aid.jpg" alt="Adult Mental Health First Aid USA certificate" loading="lazy"></a><div><h3>Adult Mental Health First Aid</h3><p>National Council for Mental Wellbeing, September 2025</p></div></article>
+<article class="cert"><a class="img" href="images/resilient-leader.jpg" target="_blank" rel="noopener"><img src="images/resilient-leader.jpg" alt="Change and Adaptability badge for The Resilient Leader" loading="lazy"></a><div><h3>The Resilient Leader (Change &amp; Adaptability)</h3><p>Institute for Management Studies, August 2025</p></div></article>
+<article class="cert"><a class="img" href="images/data-driven-learning-design.jpg" target="_blank" rel="noopener"><img src="images/data-driven-learning-design.jpg" alt="Data-Driven Learning Design certificate" loading="lazy"></a><div><h3>Data-Driven Learning Design</h3><p>LinkedIn Learning, March 2025</p></div></article>
+<article class="cert"><a class="img" href="images/leadership-emotional-intelligence.jpg" target="_blank" rel="noopener"><img src="images/leadership-emotional-intelligence.jpg" alt="Leadership and Emotional Intelligence certificate" loading="lazy"></a><div><h3>Leadership and Emotional Intelligence</h3><p>Indian School of Business via Coursera, May 2022</p></div></article>
+<article class="cert"><a class="img" href="images/lean-management.jpg" target="_blank" rel="noopener"><img src="images/lean-management.jpg" alt="Lean Management declaration of completion" loading="lazy"></a><div><h3>Lean Management</h3><p>SkillUp by Simplilearn</p></div></article>
+</div>
+</div></section>
+
+<section id="appreciation"><div class="wrap">
+<h2>What colleagues say</h2>
+<p class="lead">Recognition from Patra's ThanksBook, April 2025 to August 2026.</p>
+<div class="quotes">
+<blockquote class="big"><p>You did an outstanding job facilitating the Quality Team workshop. Your presence, clarity in directions, and ability to engage the group really stood out. I've seen such wonderful growth in your facilitation skills.</p><cite><b>Rachel L.</b>, Patra, June 2026</cite></blockquote>
+<blockquote><p>Shoutout to Abhi for an incredible "Communicate Like a Manager" workshop. Your ability to bring passion and clarity to leadership communication made the session a huge success.</p><cite><b>Brent B.</b>, Patra, April 2026</cite></blockquote>
+<blockquote><p>Thank you for your dedication to strengthening our new manager training program and creating meaningful pathways for team members to grow as leaders.</p><cite><b>Nancy D.</b>, Patra, June 2025</cite></blockquote>
+<blockquote><p>The content was thoughtfully put together, the objectives were met, and the session was engaging from start to finish. You created a space where people felt comfortable sharing.</p><cite><b>Rachel L.</b>, on the first Level Up workshop, June 2026</cite></blockquote>
+<blockquote><p>A new team member described Colleen and Abhi as wonderful, engaging trainers who made it easier to navigate all the new sites, portals and to-do items without feeling lost.</p><cite><b>Loni V.</b>, sharing employee survey feedback, August 2026</cite></blockquote>
+<blockquote><p>You brought an impressive level of preparation, confidence, and heart to the experience. Your focus on connecting with the new hires made sure everyone felt supported and seen.</p><cite><b>Rachel L.</b>, on leading his first operations onboarding class, February 2026</cite></blockquote>
+<blockquote><p>Thank you for your guidance and making us all feel so at home right from the start!</p><cite><b>Erica G.</b>, new hire, June 2026</cite></blockquote>
+</div>
+</div></section>
+
+<section id="education"><div class="wrap">
+<h2>Education</h2>
+
+<div class="edu">
+<div><h3>MA, Counselling Psychology</h3><p>Shri Vaishnav Institute of Social Science, Humanities and Arts, Indore. Completed August 2025. Final-year research on diversity and inclusion.</p></div>
+<div><h3>BA (Hons), Psychology</h3><p>Shri Vaishnav Institute of Social Science, Humanities and Arts, Indore. 2018 to 2021.</p></div>
+</div>
+</div></section>
+</main>
+
+<footer id="contact"><div class="wrap">
+<h2>Get in touch</h2>
+<p>Open to conversations about learning, leadership development and change work.</p>
+<div class="btns">
+<a class="btn main" href="mailto:abhishekprajapati9815@gmail.com">abhishekprajapati9815@gmail.com</a>
+<a class="btn" href="https://www.linkedin.com/in/abhishek-prajapati-93929184" target="_blank" rel="noopener">LinkedIn profile</a>
+</div>
+<p style="margin-top:28px">Indore, Madhya Pradesh, India</p>
+</div></footer>
+</body>
+</html>
