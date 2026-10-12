@@ -38,7 +38,7 @@ section{padding:56px 0;border-top:1px solid var(--line)}
 .top{background:#fff}
 section>.wrap>h2{font-size:clamp(28px,4vw,38px);margin-bottom:8px}
 .lead{color:var(--mute);margin:0 0 30px;max-width:62ch}
-.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:0;border:1px solid var(--line);border-radius:12px;background:var(--card);overflow:hidden}
+.stats{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));align-items:stretch}
 .stats div{padding:22px;border-right:1px solid var(--line)}
 .stats div:last-child{border-right:0}
 .pillars{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
@@ -132,7 +132,20 @@ footer h2{color:var(--ink);font-size:30px;margin-bottom:10px}
 @media (max-width:760px){.hero{grid-template-columns:1fr;padding-top:40px}.hero img{max-width:260px;order:-1}.job{grid-template-columns:1fr}.quotes{grid-template-columns:1fr}.stats div{border-right:0;border-bottom:1px solid var(--line)}.stats div:last-child{border-bottom:0}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 dialog{border:0;padding:0;background:transparent;max-width:min(94vw,1100px)}dialog::backdrop{background:rgba(18,38,74,.7)}dialog img{display:block;width:100%;height:auto;max-height:90vh;object-fit:contain;background:#fff;border-radius:10px}
-</style>
+.levelup-topics{margin:10px 0 18px 18px;padding-left:18px;line-height:1.65}.levelup-topics li{margin:5px 0}
+.stats .static-metric strong{font-variant-numeric:normal}
+
+.stats{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));align-items:stretch}
+.stats>div{min-width:0;padding:28px 24px}
+.stats>div strong{display:block;overflow-wrap:anywhere}
+@media(max-width:1100px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.stats{grid-template-columns:1fr}}
+
+
+.pillars{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+@media(max-width:1000px){.pillars{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:650px){.pillars{grid-template-columns:1fr}}
+\n</style>
 </head>
 <body>
 <nav><div class="wrap"><b>Abhishek Prajapati</b><a href="#expertise">Expertise</a><a href="#work">Experience</a><a href="#skills">Skills</a><a href="#certs">Certifications</a><a href="#appreciation">Appreciation</a><a href="#contact">Contact</a></div></nav>
@@ -146,7 +159,7 @@ dialog{border:0;padding:0;background:transparent;max-width:min(94vw,1100px)}dial
 <p>Learning and people are at the heart of what I do. I am a Learning &amp; Development Manager who enjoys helping managers grow, new hires feel welcome and teams find their footing through change. My core is running learning the way a business runs a function: clear processes, a well-managed LMS, reliable reporting and programs that people finish. Over 6.8 years at Patra Corporation, Moreyeahs and TaskUs, I have built leadership journeys, global onboarding and the dashboards that show whether learning is working.</p>
 <div class="btns">
 <a class="btn main" href="mailto:abhishekprajapati9815@gmail.com">Email me</a>
-<a class="btn" href="https://www.linkedin.com/in/abhishek-prajapati-93929184" target="_blank" rel="noopener">LinkedIn</a>
+<a class="btn" href="https://www.linkedin.com/in/abhishek-prajapati-a93290184" target="_blank" rel="noopener">LinkedIn</a>
 <a class="btn" href="#appreciation">Read what colleagues say</a>
 </div>
 </div>
@@ -163,10 +176,11 @@ dialog{border:0;padding:0;background:transparent;max-width:min(94vw,1100px)}dial
 <main>
 <section style="border-top:0;padding-top:0"><div class="wrap">
 <div class="stats">
-<div><strong data-to="450" data-pre="~">~450</strong><span>managers enrolled in leadership and manager-development programs</span></div>
-<div><strong data-from="52" data-to="82" data-pre="52% to " data-suf="%">52% to 82%</strong><span>e-learning engagement after redesigning the MAPS learning journey</span></div>
-<div><strong data-to="3" data-suf=" regions">3 regions</strong><span>global onboarding across the US, Philippines and India</span></div>
-<div><strong data-to="300" data-suf="+">300+</strong><span>employees and 15+ team leads supported at TaskUs</span></div>
+<div><strong data-to="259" data-suf="+">259+</strong><span>Managers, assistant managers and leaders trained through leadership and manager-development programs.</span></div>
+<div><strong data-from="52" data-to="88" data-pre="52% to " data-suf="%">52% to 88%</strong><span>E-learning engagement improvement from 52% to 88% after restructuring the Manager Achievement Pathways program and introducing mentoring and peer-to-peer learning.</span></div>
+<div><strong data-to="3" data-suf=" regions">3 regions</strong><span>Culture and onboarding support at TaskUs and MoreYeahs; restructured global onboarding at Patra Corporation across the US, India and the Philippines.</span></div>
+<div><strong data-to="300" data-suf="+">300+</strong><span>Employees and 15+ team leads supported at TaskUs.</span></div>
+<div class="static-metric"><strong class="no-count">Level Up Program</strong><span>At Patra Corporation, created the <em>From Doing to Leading</em> leadership journey, combining workshops and e-learning: Think Like a Leader, Communicate Like a Leader, Emotional Agility, The Power of Connections, and Having Difficult Conversations.</span></div>
 </div>
 </div></section>
 
@@ -184,17 +198,21 @@ dialog{border:0;padding:0;background:transparent;max-width:min(94vw,1100px)}dial
 <li>Workshops on leadership communication, feedback, coaching and change.</li>
 <li>DISC, CliftonStrengths and MBTI used in coaching and team interventions.</li></ul></div>
 <div class="pillar"><h3>Training management</h3><ul>
-<li>Global onboarding across the US, Philippines and India.</li>
+<li>Designed and supported global onboarding at TaskUs and MoreYeahs, and restructured Patra Corporation’s global onboarding across the US, India and the Philippines.</li>
 <li>Training calendars, batch planning and scheduling across a call site.</li>
 <li>Partnering with SMEs, operations leaders and external training vendors.</li></ul></div>
 <div class="pillar"><h3>Learning analytics</h3><ul>
 <li>Training dashboards and metrics for business reviews, built in Power BI and Excel.</li>
 <li>Onboarding completion, certification rates and engagement tracking tied to KPIs.</li>
-<li>Engagement in MAPS raised from 52% to 82%.</li></ul></div>
+<li>Engagement in MAPS raised from 62% to 88%.</li></ul></div>
 <div class="pillar"><h3>Digital learning and instructional design</h3><ul>
 <li>E-learning and blended journeys in Articulate 360 (Storyline and Rise).</li>
 <li>Assessments, role-based training and learning needs analysis.</li>
 <li>AI-enabled content development with ChatGPT, Microsoft 365 Copilot and Adobe Express.</li></ul></div>
+<div class="pillar"><h3>Soft skills and personality development</h3><ul>
+<li>Supported soft-skills and personality-development learning for IT professionals at MoreYeahs as part of the Skill Development (SD) program.</li>
+<li>Contributed to professional capability building alongside role-based technical training.</li>
+<li>Focused on strengthening workplace effectiveness and helping IT professionals develop beyond technical skills.</li></ul></div>
 </div>
 </div></section>
 
@@ -207,9 +225,9 @@ dialog{border:0;padding:0;background:transparent;max-width:min(94vw,1100px)}dial
 <div class="sub">Leadership &amp; professional development</div>
 <ul>
 <li>Lead leadership and manager-development initiatives across India and US operations, enrolling about 450 managers.</li>
-<li>Redesigned the MAPS (Manager Achievements Pathways) learning journey, lifting e-learning engagement from 52% to 82%.</li>
-<li>Built a tiered leadership capability framework, from "Doing" to "Leading", defining levels and progression criteria.</li>
-<li>Created the Level Up Program for managers and senior managers and handled its governance and tracking, building a talent pipeline.</li>
+<li>Redesigned the MAPS (Manager Achievement Pathways) learning journey by restructuring the program and introducing mentoring and peer-to-peer learning support, increasing e-learning engagement from 62% to 88%.</li>
+<li>Built a tiered leadership capability framework, from “Doing” to “Leading”, defining leadership levels and progression criteria.</li>
+<li>Created and governed the Level Up: From Doing to Leading program for managers and senior managers, combining interactive workshops with self-paced e-learning to build leadership capability and support a talent pipeline.</li>
 <li>Delivered change management workshops, including one on change in AI in operations, and DISC-based behavioural interventions for global managers.</li>
 <li>Use CliftonStrengths, DISC and MBTI assessments in one-on-one coaching to help employees build on their strengths.</li>
 <li>Architected blended learning that combines digital, facilitator-led and experiential components.</li>
@@ -217,7 +235,7 @@ dialog{border:0;padding:0;background:transparent;max-width:min(94vw,1100px)}dial
 </ul>
 <div class="sub">Onboarding &amp; program delivery</div>
 <ul>
-<li>Lead global onboarding for the US, Philippines and India, and am currently upgrading it with culture alignment training.</li>
+<li>Restructured Patra Corporation’s global onboarding program across the US, India and the Philippines to strengthen consistency and cultural alignment across regions.</li>
 <li>Support US operations teams with new hire insurance training, tracking new hire progress and aligning it with business KPIs.</li>
 <li>Manage programs across three geographies, coordinating with operations leaders, SMEs and stakeholders on learning objectives.</li>
 <li>Own the training dashboard and training metrics used in business reviews, including onboarding completions and KPI tracking.</li>
@@ -242,7 +260,7 @@ dialog{border:0;padding:0;background:transparent;max-width:min(94vw,1100px)}dial
 <div class="job"><div class="when">Jan 2020 to Apr 2024<br>Indore</div><div>
 <h3>Learning Experience Leader</h3><div class="org">TaskUs | BPO &amp; Outsourcing</div>
 <ul>
-<li>Designed and delivered training in a BPO environment covering customer experience, onboarding and process knowledge.</li>
+<li>Designed and delivered training at TaskUs across customer experience, new-hire onboarding and process knowledge, supporting consistent learning delivery in a BPO environment.</li>
 <li>Led a team of 8 QAs and 15 Team Leads, coaching on performance, quality and capability in line with client expectations and operational targets.</li>
 <li>Supported 15+ Team Leads and 300+ employees through training and coaching.</li>
 <li>Developed training content, SOPs, manuals, job aids and New Hire Integration Programmes.</li>
@@ -254,6 +272,24 @@ dialog{border:0;padding:0;background:transparent;max-width:min(94vw,1100px)}dial
 </ul>
 </div></div>
 </div></section>
+
+<section id="level-up" class="section">
+  <div class="wrap">
+    <p class="eyebrow">Leadership Development</p>
+    <h2>Level Up: From Doing to Leading</h2>
+    <p>Created the Level Up: From Doing to Leading leadership development program, combining interactive workshops and complementary self-paced e-learning modules to help employees transition from individual contributors to effective leaders.</p>
+    <div class="cards">
+      <article class="card"><h3>Think Like a Leader</h3><p>Developing a leadership mindset and decision-making skills.</p></article>
+      <article class="card"><h3>Communicate Like a Leader</h3><p>Strengthening leadership communication and presence.</p></article>
+      <article class="card"><h3>Emotional Agility</h3><p>Managing emotions and responding effectively to workplace challenges.</p></article>
+      <article class="card"><h3>The Power of Connections</h3><p>Building professional relationships and fostering collaboration.</p></article>
+      <article class="card"><h3>Having Difficult Conversations</h3><p>Building confidence in navigating challenging workplace discussions.</p></article>
+    </div>
+    <p>The blended learning journey connected self-paced e-learning with practical workshops, reflection and workplace application to reinforce learning and encourage continuous leadership development.</p>
+  </div>
+</section>
+
+
 
 <section id="skills"><div class="wrap">
 <h2>Skills and tools</h2>
@@ -305,7 +341,7 @@ dialog{border:0;padding:0;background:transparent;max-width:min(94vw,1100px)}dial
 <p>Open to conversations about learning, leadership development and change work.</p>
 <div class="btns">
 <a class="btn main" href="mailto:abhishekprajapati9815@gmail.com">abhishekprajapati9815@gmail.com</a>
-<a class="btn" href="https://www.linkedin.com/in/abhishek-prajapati-93929184" target="_blank" rel="noopener">LinkedIn profile</a>
+<a class="btn" href="https://www.linkedin.com/in/abhishek-prajapati-a93290184" target="_blank" rel="noopener">LinkedIn profile</a>
 </div>
 <p style="margin-top:28px">Indore, Madhya Pradesh, India</p>
 </div></footer>
@@ -328,7 +364,7 @@ function count(n){var to=+n.dataset.to,from=n.dataset.from?+n.dataset.from:0,pre
 function step(t){if(!t0)t0=t;var p=Math.min((t-t0)/d,1),v=Math.round(from+(to-from)*(1-Math.pow(1-p,3)));n.textContent=(n.dataset.from?"52% to ":pre)+v+suf;if(p<1)requestAnimationFrame(step)}
 n.textContent=(n.dataset.from?"52% to ":pre)+from+suf;requestAnimationFrame(step)}
 var so=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){count(e.target);so.unobserve(e.target)}})},{threshold:.6});
-document.querySelectorAll(".stats strong").forEach(function(n){so.observe(n)});
+document.querySelectorAll(".stats strong:not(.no-count)").forEach(function(n){so.observe(n)});
 })();
 </script>
 </body>
