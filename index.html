@@ -208,6 +208,31 @@ section>.wrap>h2::after{content:"";display:block;width:56px;height:4px;margin-to
 .vt-bg{background:radial-gradient(circle at 85% 20%,rgba(142,202,230,.55),transparent 55%),linear-gradient(135deg,#023047 0%,#05455f 55%,#219ebc 130%)}
 footer{border-top:4px solid var(--amber)}
 dialog::backdrop{background:rgba(2,48,71,.72)}
+
+/* What I do v3: one-row carousel, 3 cards visible */
+#expertise .pillars{display:block}
+.wid-bar{display:flex;align-items:center;justify-content:space-between;gap:16px;margin:0 0 18px}
+.wid-count{font:700 13px/1 "Source Sans 3",system-ui,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--teal-deep)}
+.wid-btns{display:flex;gap:10px}
+.wid-btns button{width:44px;height:44px;border-radius:50%;border:1.5px solid var(--navy);background:#fff;color:var(--navy);display:grid;place-items:center;cursor:pointer;transition:background .2s,color .2s,border-color .2s}
+.wid-btns button:hover:not(:disabled){background:var(--navy);color:#fff}
+.wid-btns button:disabled{opacity:.35;cursor:default;border-color:var(--line)}
+.wid-btns #widPlay{border-color:var(--teal);color:var(--teal-deep)}
+.wid-btns svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.wid-track{--gap:24px;display:flex;gap:var(--gap);overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;padding:6px 2px 26px;margin:0 -2px;scrollbar-width:thin;scrollbar-color:var(--sky) transparent;overscroll-behavior-x:contain}
+.wid-track:focus-visible{outline:2px solid var(--teal);outline-offset:4px;border-radius:12px}
+.wid-track::-webkit-scrollbar{height:8px}
+.wid-track::-webkit-scrollbar-thumb{background:var(--sky);border-radius:4px}
+#expertise .wid-track .pillar{flex:0 0 calc((100% - 2*var(--gap))/3);scroll-snap-align:start;display:flex;flex-direction:column;padding:26px 28px 28px;border-top-width:4px;min-width:0}
+#expertise .pillar .num{font:700 13px/1 "Bricolage Grotesque","Source Sans 3",system-ui,sans-serif;letter-spacing:.08em;color:var(--teal-deep);margin-bottom:12px}
+#expertise .pillar h3{font-size:19px;line-height:1.3;margin:0 0 14px;min-height:2.6em}
+#expertise .pillar ul{margin:0;padding-left:20px}
+.wid-dots{display:flex;justify-content:center;gap:8px}
+.wid-dots button{width:8px;height:8px;padding:0;border:0;border-radius:4px;background:var(--line);cursor:pointer;transition:width .25s,background .25s}
+.wid-dots button[aria-current="true"]{width:26px;background:var(--orange)}
+@media(max-width:1000px){#expertise .wid-track .pillar{flex-basis:calc((100% - var(--gap))/2)}}
+@media(max-width:650px){.wid-track{--gap:16px}#expertise .wid-track .pillar{flex-basis:86%;padding:22px}#expertise .pillar h3{min-height:0}}
+@media(prefers-reduced-motion:reduce){.wid-track{scroll-behavior:auto}}
 </style>
 </head>
 <body>
@@ -272,35 +297,39 @@ dialog::backdrop{background:rgba(2,48,71,.72)}
 <h2>What I do</h2>
 <p class="lead">Seven areas of work, with the first one as the foundation for the rest.</p>
 <div class="pillars">
-<div class="pillar"><h3>L&amp;D operations and governance</h3><ul>
+<div class="wid-bar"><span class="wid-count" id="widCount">1–3 of 7</span><div class="wid-btns"><button type="button" id="widPlay" aria-label="Pause auto-scroll" aria-pressed="false"><svg viewBox="0 0 24 24" id="widIcon"><path d="M9 5v14M15 5v14"/></svg></button><button type="button" id="widPrev" aria-label="Previous cards"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button><button type="button" id="widNext" aria-label="Next cards"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button></div></div>
+<div class="wid-track" id="widTrack" tabindex="0" role="region" aria-label="Seven areas of work, scroll sideways">
+<div class="pillar"><span class="num">01 · Foundation</span><h3>L&amp;D operations and governance</h3><ul>
 <li>LMS administration on Docebo, Moodle and Talent LMS, and setting up an in-house LMS.</li>
 <li>Governance and tracking for the Level Up program for managers and senior managers.</li>
 <li>Compliance learning on information security and internal policies.</li>
 <li>SOPs, manuals and job aids that standardize how training is run.</li></ul></div>
-<div class="pillar"><h3>Leadership and behavioural development</h3><ul>
-<li>MAPS manager learning journey and a tiered "Doing" to "Leading" capability framework.</li>
-<li>Workshops on leadership communication, feedback, coaching and change.</li>
-<li>DISC, CliftonStrengths and MBTI used in coaching and team interventions.</li></ul></div>
-<div class="pillar"><h3>Training management</h3><ul>
+<div class="pillar"><span class="num">02</span><h3>Training management</h3><ul>
 <li>Designed and supported global onboarding at TaskUs and MoreYeahs, and restructured Patra Corporation’s global onboarding across the US, India and the Philippines.</li>
 <li>Training calendars, batch planning and scheduling across a call site.</li>
 <li>Partnering with SMEs, operations leaders and external training vendors.</li></ul></div>
-<div class="pillar"><h3>Culture and people engagement</h3><ul>
-<li>Built the onboarding culture program at MoreYeahs from the ground up, so new joiners understood how the company works and what good performance looks like.</li>
-<li>Partnered with the HR team to create appreciation programs and engagement activities that brought the culture values to life.</li>
-<li>Helped build a culture of engagement and performance, starting from a new joiner’s first day.</li></ul></div>
-<div class="pillar"><h3>Learning analytics</h3><ul>
-<li>Training dashboards and metrics for business reviews, built in Power BI and Excel.</li>
-<li>Onboarding completion, certification rates and engagement tracking tied to KPIs.</li>
-<li>Engagement in MAPS raised from 52% to 88%.</li></ul></div>
-<div class="pillar"><h3>Digital learning and instructional design</h3><ul>
+<div class="pillar"><span class="num">03</span><h3>Digital learning and instructional design</h3><ul>
 <li>E-learning and blended journeys in Articulate 360 (Storyline and Rise).</li>
 <li>Assessments, role-based training and learning needs analysis.</li>
 <li>AI-enabled content development with ChatGPT, Microsoft 365 Copilot and Adobe Express.</li></ul></div>
-<div class="pillar"><h3>Soft skills and personality development</h3><ul>
+<div class="pillar"><span class="num">04</span><h3>Soft skills and personality development</h3><ul>
 <li>Supported soft-skills and personality-development learning for IT professionals at MoreYeahs as part of the Skill Development (SD) program.</li>
 <li>Contributed to professional capability building alongside role-based technical training.</li>
 <li>Focused on strengthening workplace effectiveness and helping IT professionals develop beyond technical skills.</li></ul></div>
+<div class="pillar"><span class="num">05</span><h3>Leadership and behavioural development</h3><ul>
+<li>MAPS manager learning journey and a tiered "Doing" to "Leading" capability framework.</li>
+<li>Workshops on leadership communication, feedback, coaching and change.</li>
+<li>DISC, CliftonStrengths and MBTI used in coaching and team interventions.</li></ul></div>
+<div class="pillar"><span class="num">06</span><h3>Culture and people engagement</h3><ul>
+<li>Built the onboarding culture program at MoreYeahs from the ground up, so new joiners understood how the company works and what good performance looks like.</li>
+<li>Partnered with the HR team to create appreciation programs and engagement activities that brought the culture values to life.</li>
+<li>Helped build a culture of engagement and performance, starting from a new joiner’s first day.</li></ul></div>
+<div class="pillar"><span class="num">07</span><h3>Learning analytics</h3><ul>
+<li>Training dashboards and metrics for business reviews, built in Power BI and Excel.</li>
+<li>Onboarding completion, certification rates and engagement tracking tied to KPIs.</li>
+<li>Engagement in MAPS raised from 52% to 88%.</li></ul></div>
+</div>
+<div class="wid-dots" id="widDots"></div>
 </div>
 </div></section>
 
@@ -415,6 +444,46 @@ function step(t){if(!t0)t0=t;var p=Math.min((t-t0)/d,1),v=Math.round(from+(to-fr
 n.textContent=(n.dataset.from?"52% to ":pre)+from+suf;requestAnimationFrame(step)}
 var so=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){count(e.target);so.unobserve(e.target)}})},{threshold:.6});
 document.querySelectorAll(".stats strong:not(.no-count)").forEach(function(n){so.observe(n)});
+})();
+</script>
+<script>
+(function(){
+var t=document.getElementById('widTrack');if(!t)return;
+var cards=[].slice.call(t.querySelectorAll('.pillar')),prev=document.getElementById('widPrev'),next=document.getElementById('widNext'),dots=document.getElementById('widDots'),count=document.getElementById('widCount');
+var pages=[];
+function perView(){return Math.max(1,Math.round(t.clientWidth/cards[0].getBoundingClientRect().width));}
+function step(){return cards[1].offsetLeft-cards[0].offsetLeft;}
+function build(){var n=Math.max(1,cards.length-perView()+1);dots.innerHTML='';pages=[];
+ for(var i=0;i<n;i++){(function(i){var b=document.createElement('button');b.type='button';b.setAttribute('aria-label','Go to card '+(i+1));b.onclick=function(){t.scrollTo({left:i*step()})};dots.appendChild(b);pages.push(b);})(i);}
+ update();}
+function update(){var pv=perView(),i=Math.round(t.scrollLeft/step()),max=cards.length-pv;
+ if(t.scrollLeft+t.clientWidth>=t.scrollWidth-2)i=max;i=Math.max(0,Math.min(i,max));
+ prev.disabled=i<=0;next.disabled=false;
+ count.textContent=(i+1)+'\u2013'+Math.min(i+pv,cards.length)+' of '+cards.length;
+ pages.forEach(function(b,k){if(k===i)b.setAttribute('aria-current','true');else b.removeAttribute('aria-current');});}
+var playBtn=document.getElementById('widPlay'),icon=document.getElementById('widIcon');
+var DELAY=2500,timer=null,userPaused=false,hover=false,reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+function atEnd(){return t.scrollLeft+t.clientWidth>=t.scrollWidth-2;}
+function advance(){if(atEnd())t.scrollTo({left:0});else t.scrollBy({left:step()});}
+function stop(){clearInterval(timer);timer=null;}
+function start(){stop();if(userPaused||hover||document.hidden||reduce)return;timer=setInterval(advance,DELAY);}
+function setPaused(v){userPaused=v;playBtn.setAttribute('aria-pressed',v?'true':'false');playBtn.setAttribute('aria-label',v?'Play auto-scroll':'Pause auto-scroll');
+ icon.innerHTML=v?'<path d="M7 4.5l12 7.5-12 7.5z"/>':'<path d="M9 5v14M15 5v14"/>';start();}
+playBtn.onclick=function(){setPaused(!userPaused)};
+if(reduce)setPaused(true);
+prev.onclick=function(){t.scrollBy({left:-step()});start()};
+next.onclick=function(){if(atEnd())t.scrollTo({left:0});else t.scrollBy({left:step()});start()};
+var wrap=t.parentNode;
+wrap.addEventListener('mouseenter',function(){hover=true;stop()});
+wrap.addEventListener('mouseleave',function(){hover=false;start()});
+wrap.addEventListener('focusin',function(){hover=true;stop()});
+wrap.addEventListener('focusout',function(){hover=false;start()});
+t.addEventListener('touchstart',stop,{passive:true});
+t.addEventListener('touchend',function(){setTimeout(start,DELAY)},{passive:true});
+document.addEventListener('visibilitychange',start);
+t.addEventListener('scroll',function(){window.requestAnimationFrame(update)},{passive:true});
+t.addEventListener('keydown',function(e){if(e.key==='ArrowRight'){e.preventDefault();next.click()}else if(e.key==='ArrowLeft'){e.preventDefault();prev.click()}});
+window.addEventListener('resize',build);build();start();
 })();
 </script>
 </body>
